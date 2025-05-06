@@ -1,0 +1,49 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Library | Main{% endblock %}
+
+{% block header %}
+                <li><a href="{% url 'main' %}" class="button--nav--active">Главная</a></li>
+                <li><a href="{% url 'catalog' %}" class="button--nav">Каталог</a></li>
+                <li><a href="{% url 'favorites' %}" class="button--nav">Избранное</a></li>
+                <li><a href="{% url 'news' %}" class="button--nav">Новости</a></li>
+                <li><a href="{% url 'support' %}" class="button--nav">Поддержка</a></li>
+{% endblock %}
+
+{% block main %}
+    <div class="main--page--content">
+        <div class="content">
+            <p style="font-size: 40px;">Library - Ваш путь к знаниям!</p>
+            <h1>
+                На нашем сайте вы найдёте множество книг, журналов и других ресурсов для читателей всех возрастов и интересов. Наша цель – предоставить доступ к информации и культуре, способствуя развитию образования и интеллектуального роста.
+            </h1>
+            <p style="padding: 100px 0 0;">Почему мы лучшие ?</p>
+        </div>
+        <div class="container">
+            <div class="item">
+                <p>Безмерный каталог</p>
+                <h1>
+                    В нашем каталоге вы найдёте более 100.000 книг на различных языках, охватывающих все жанры!
+                </h1>
+            </div>
+            <div class="item">
+                <p>Приятный интерфейс</p>
+                <h1>
+                    Очень приятный для глаз интерфейс, который сделает время провождения на сайте более комфортным
+                </h1>
+            </div>
+            <div class="item">
+                <p>Актуальные новости</p>
+                <h1>
+                    Будьте в курсе последних поступлений и новостей из мира литературы на нашей странице новостей
+                </h1>
+            </div>
+            <div class="item">
+                <p>Поддержка 24/7</p>
+                <h1>
+                    Наша поддержка работает 24/7, чтобы в случае трудностей, незамедлительно помочь вам
+                </h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}

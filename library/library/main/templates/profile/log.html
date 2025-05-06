@@ -1,0 +1,39 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Library | Log{% endblock %}
+
+{% block header %}
+                <li><a href="{% url 'main' %}" class="button--nav">Главная</a></li>
+                <li><a href="{% url 'catalog' %}" class="button--nav">Каталог</a></li>
+                <li><a href="{% url 'favorites' %}" class="button--nav">Избранное</a></li>
+                <li><a href="{% url 'news' %}" class="button--nav">Новости</a></li>
+                <li><a href="{% url 'support' %}" class="button--nav">Поддержка</a></li>
+{% endblock %}
+
+{% block main %}
+    <div class="main--page--content">
+        <div class="content">
+
+            <form method="post" class="log" autocomplete="off">
+                {% csrf_token %}
+                <p style="font-size: 40px; margin: 0 0 10px;">Вход</p>
+                {% if messages %}
+                    <div class="messages" style="text-align: center; margin: 50px 0 20px">
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="messages" style="text-align: center; margin: 50px 0 20px">
+                        Введите логин и пароль:
+                    </div>
+                {% endif %}
+                <input name="username" type="text" placeholder="Логин *" required readonly onfocus="this.removeAttribute('readonly')"><br>
+                <input name="password1" type="password" placeholder="Пароль *" required><br>
+                <button type="submit" class="button--submit">Войти</button>
+                <h4>Уже есть аккаунт?<a href="{% url 'reg' %}"> Регистрация </a></h4>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

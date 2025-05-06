@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="{% static 'main/images/icon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+<!-- Шапка страницы -->
+<header>
+    <span class="logo"><a href="{% url 'main' %}">Library</a></span>
+    <div>
+        <nav>
+            <ul>
+                {% block header %}
+                {% endblock %}
+            </ul>
+        </nav>
+    </div>
+    {% if user.is_authenticated %}
+    <a class="button--logout" href="{% url 'logout' %}"><img src="{% static 'main/images/logout.png' %}" alt="error"></a>
+    {% endif %}
+    <a class="button--profile" href="{% url 'profile' %}"><img src="{% static 'main/images/profile.png' %}" alt="error"></a>
+</header>
+<!-- Главное содержимое страницы -->
+<main>
+    {% block main %}
+    {% endblock %}
+</main>
+<!-- Подвал сайта -->
+<footer>
+</footer>
+<!---->
+</body>
+</html>

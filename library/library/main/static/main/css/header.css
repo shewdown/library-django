@@ -1,0 +1,92 @@
+* {
+    margin: 0; /* внешний отступ */
+    padding: 0; /* внутрений отступ */
+    color: black;
+    font-family: sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    display: flex;            /* Делаем body flex-контейнером */
+    flex-direction: column;   /* Располагаем элементы по вертикали */
+    height: 100vh;            /* Минимальная высота body - 100% высоты viewport */
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    background: #f5f5f5;
+    border-bottom: 3px solid black;
+    box-shadow: 0 5px 15px 0 rgba(34, 60, 80, 0.2);
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    z-index: 100;
+}
+
+header span.logo {
+    position: absolute;
+    left: 50px;
+    font-size: 40px;
+}
+
+header a.button--profile {
+    position: absolute;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+header a.button--logout {
+    position: absolute;
+    right: 130px;
+    width: 50px;
+    height: 50px;
+}
+
+header a.button--profile img, header a.button--logout img {
+    width: 100%;
+    height: 100%;
+}
+
+header div {
+    display: flex;
+    width: 35%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+header div nav {
+    width: 100%;
+}
+
+header div nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+header div nav ul li .button--nav--active {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 15px;
+    background: #262626;
+    color: white;
+}
+
+header div nav ul li .button--nav {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 15px;
+    transition: 300ms all;
+}
+
+header div nav ul li .button--nav:hover {
+    background: #262626;
+    color: white;
+}

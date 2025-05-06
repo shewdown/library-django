@@ -1,0 +1,166 @@
+main {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.main--page--content {
+    width: 70%;
+    height: 100%;
+    margin: 70px auto;
+}
+
+.main--page--content .content {
+    width: 100%;
+    height: auto;
+}
+
+.main--page--content .content p {
+    padding: 40px 0 25px;
+    font-size: 35px;
+    text-align: center;
+    color: #000;
+}
+
+.main--page--content .content h1 {
+    width: 50%;
+    margin: 40px auto 0;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 25px;
+    color: #262626;
+}
+
+.main--page--content div.container {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 50px auto;
+    height: 300px;
+}
+
+div.container div.item {
+    width: 22%;
+    border: 2px solid #262626;
+    border-radius: 20px;
+    transition: 200ms all;
+    box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+div.container div.item:hover {
+    transform: scale(1.02);
+}
+
+div.item p {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+div.item h1 {
+    text-align: center;
+    margin: 60px 20px;
+    font-size: 18px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 113px;
+}
+
+/* форма регистрации */
+
+div.content form.reg {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 550px;
+    margin: 200px auto 0;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: 3px solid #262626;
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
+}
+
+div.content form.reg input {
+    width: 200px;
+    margin: 5px auto;
+    border: 2px solid #262626;
+    border-radius: 15px;
+    background: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+div.content form.reg button.button--submit {
+    margin: 60px auto 20px;
+    padding: 8px 30px;
+    border-radius: 15px;
+    border: 2px solid #262626;
+    font-size: 16px;
+    transition: 300ms all;
+}
+
+div.content form.reg button.button--submit:hover {
+    background: #262626;
+    color: #f5f5f5;
+}
+
+div.content form.reg h4 {
+    text-align: center;
+    font-weight: normal;
+}
+
+div.content form.reg a {
+    font-weight: bold;
+}
+
+/* форма входа */
+
+div.content form.log {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 550px;
+    margin: 200px auto 0;
+    padding: 10px 30px;
+    border-radius: 35px;
+    border: 3px solid #262626;
+    box-shadow: 0 5px 30px 0 rgba(0,0,0,0.2);
+}
+
+div.content form.log input {
+    width: 200px;
+    margin: 5px auto;
+    border: 2px solid #262626;
+    border-radius: 15px;
+    background: transparent;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+div.content form.log button.button--submit {
+    margin: 127px auto 20px;
+    padding: 8px 30px;
+    border-radius: 15px;
+    border: 2px solid #262626;
+    font-size: 16px;
+    transition: 300ms all;
+}
+
+div.content form.log button.button--submit:hover {
+    background: #262626;
+    color: #f5f5f5;
+}
+
+div.content form.log h4 {
+    text-align: center;
+    font-weight: normal;
+}
+
+div.content form.log a {
+    font-weight: bold;
+}
